@@ -1,15 +1,17 @@
 import Image from "next/image"
-import "../styles/sidebar.scss"
-import NavLink from "./NavLink"
 import { FaBell, FaEnvelope, FaHome } from "react-icons/fa"
 import { FaEllipsis, FaMagnifyingGlass } from "react-icons/fa6"
+import "../styles/sidebar.scss"
+import NavLink from "./NavLink"
+import Logo from "./Logo"
 
 export default function Sidebar() {
     return (
         <nav className="sidebar">
             <div className="sidebar-flex">
                 <div className="sidebar-content">
-                    <Image draggable={false} src={"/logo.svg"} width={128} height={47} alt="logo" />
+                    {/* <Image draggable={false} src={"/logo.svg"} width={128} height={47} alt="logo" /> */}
+                    <Logo width="128" height="47" />
                     <div className="sidebar-links">
                         <NavLink href={"/"}>
                             <FaHome />

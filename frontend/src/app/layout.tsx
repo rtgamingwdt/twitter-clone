@@ -1,6 +1,7 @@
 import Feed from "@/components/Feed";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
+import { ThemeProvider } from 'next-themes';
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 
@@ -18,13 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Sidebar />
-        <main>
-          <div className="view">{children}</div>
-          <Feed />
-        </main>
-      </body>
+      <ThemeProvider>
+        <body className={inter.className}>
+          <Sidebar />
+          <main>
+            <div className="view">{children}</div>
+            <Feed />
+          </main>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
