@@ -1,0 +1,106 @@
+nav.sidebar {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-shadow: 1px 0px black;
+    padding: 1rem 0.5rem;
+    user-select: none;
+
+    div.sidebar-flex {
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+
+        div.sidebar-content {
+            display: flex;
+            flex-direction: column;
+            width: 256px;
+
+            div.sidebar-links {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                gap: 1rem;
+                overflow-y: auto;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 1.5rem;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    transition-duration: 250ms;
+
+                    &[active="true"] {
+                        font-weight: 900;
+                    }
+
+                    &:hover {
+                        background-color: hsla(0, 0, 0, 0.25);
+                    }
+                }
+
+                button.post {
+                    span {
+                        font-size: large;
+                        color: white;
+                    }
+                }
+            }
+
+            button.sidebar-panel {
+                width: 100%;
+                height: 64px;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 0.5rem;
+                transition-duration: 500ms;
+                background-color: transparent;
+
+                div.sidebar-profile {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    width: 75%;
+                    overflow-x: hidden;
+
+                    span {
+                        display: block;
+                        font-size: small;
+                        text-overflow: ellipsis;
+
+                        span.username {
+                            font-weight: 900;
+                            text-overflow: ellipsis;
+
+                        }
+
+                        span.tag {
+                            color: var(--fg-muted)
+                        }
+                    }
+                }
+
+                svg.more {
+                    padding: 0.25rem;
+                }
+
+                &:hover {
+                    background-color: hsla(0, 0, 0, 0.25);
+                    border-radius: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav.sidebar {
+        display: none;
+    }
+}
