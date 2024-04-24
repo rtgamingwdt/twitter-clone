@@ -1,5 +1,5 @@
 div.home-header {
-  padding: 1.25rem;
+  padding: 0.5rem;
   display: flex;
   border-bottom: 1px solid var(--border);
   align-items: center;
@@ -26,7 +26,67 @@ div.home-header {
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.25);
+      background-color: var(--shadow);
+    }
+  }
+}
+
+div.home-post {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 0.5rem;
+
+  div.home-post-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    div.home-post-text-area-wrapper {
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: large;
+        height: fit-content;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        border-radius: 0.25rem;
+
+        &:focus {
+          background-color: var(--shadow);
+        }
+      }
+
+      span.home-post-text-area-limit {
+        color: red;
+      }
+    }
+
+    div.home-post-editor-options {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      button {
+        padding: 0.5rem;
+        background-color: transparent;
+
+        svg {
+          font-size: large;
+          width: 16px;
+          height: 16px;
+          color: var(--bg-primary);
+        }
+
+        &:hover {
+          filter: brightness(125%);
+          background-color: var(--shadow);
+        }
+      }
     }
   }
 }
