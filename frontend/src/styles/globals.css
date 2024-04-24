@@ -2,6 +2,7 @@
   --background: white;
   --bg-primary: rgb(83, 83, 224);
   --fg-muted: rgb(25, 25, 25);
+  --border: rgb(240, 240, 240);
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -11,6 +12,7 @@
 
 [data-theme="dark"] {
   --background: black;
+  --border: rgb(20, 20, 20);
   --bg-primary: rgb(74, 74, 243);
   --fg-muted: rgb(94, 90, 90);
   color: white;
@@ -39,7 +41,7 @@ main {
 div.view {
   width: 800px;
   min-height: 100%;
-  border-right: 1px solid;
+  border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   transition-duration: 250ms;
